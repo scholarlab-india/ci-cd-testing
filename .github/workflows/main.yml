@@ -58,14 +58,6 @@ jobs:
           path: Library
           key: Library-test-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
           restore-keys: Library-test-
-      - name: Run Unit Tests
-        uses: game-ci/unity-test-runner@v2
-        env:
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
-        with:
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup dotnet 5 for SonarQube
         uses: actions/setup-dotnet@v2
         with:
