@@ -70,12 +70,8 @@ jobs:
       - name: Setup Unity
         uses: kuler90/setup-unity@v1.1.0
         with:
-          # Unity version to install. For example, 2019.4.9f1. Project version will be used if not provided
           unity-version: 2022.3.21f1
           unity-version-changeset: webgl
-      - name: Setup Unity for SonarQube
-        id: setup-unity
-        uses: kuler90/setup-unity@v1
       - name: Activate Unity for SonarQube
         uses: kuler90/activate-unity@v1
         with:
